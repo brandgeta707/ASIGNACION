@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: springboot-microservice
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://<host>:3306/sisadmedu?useSSL=false&serverTimezone=UTC
+      - key: DB_USER
+        value: root
+      - key: DB_PASS
+        value: <password>
